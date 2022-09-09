@@ -8,8 +8,10 @@ function staticLoadPlaces() {
         {
             name: 'Magnemite',
             location: {
-                lat: 42.026865,
-                lng: -93.651164,
+                // lat: 42.027254,
+                // lng: -93.650700, //east  sic
+                lat: 42.026993,
+                lng: -93.650793, //water tower
             }
         },
     ];
@@ -28,7 +30,7 @@ function renderPlaces(places) {
         model.setAttribute('rotation', '0 0 0');
         model.setAttribute('animation-mixer', '');
         model.setAttribute('scale', '.15 .15 .15');
-        // model.setAttribute('position', { x: 0, y: 0, z: -10 });
+        model.setAttribute('position', { x: 0, y: 0, z: -10 });
 
         model.addEventListener('loaded', () => {
             window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
